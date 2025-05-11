@@ -1,0 +1,22 @@
+influxdb:
+  host: localhost
+  port: 8086
+  username: youless
+  password: password
+  database: youless_metrics
+
+devices:
+  - name: main
+    ip: 192.168.1.20
+    interval: 10
+    enabled: true
+  # Voeg hier meer apparaten toe indien nodig
+  # - name: tweede_meter
+  #   ip: 192.168.1.21
+  #   interval: 10
+  #   enabled: true
+
+collection:
+  interval: 10  # seconden tussen metingen
+  retry_interval: 30  # seconden wachten na mislukte poging
+  max_retries: 3  # maximum aantal pogingen per cyclus
